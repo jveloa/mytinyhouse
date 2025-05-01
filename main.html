@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tiny Smart Home </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Add any custom CSS overrides or additions here */
+        body {
+            font-family: 'Inter', sans-serif; /* Ensure Inter font is used */
+        }
+        /* Style for the gallery modal */
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        .modal-content {
+            transition: transform 0.25s ease;
+        }
+        /* Simple fade-in animation for hero text */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero-text-animation {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .hero-button-animation {
+            animation: fadeIn 1.5s ease-out forwards;
+            opacity: 0; /* Start hidden */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-indigo-600">My Tiny Home</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="#amenities" class="text-gray-600 hover:text-indigo-600 transition duration-300">Amenities</a>
+                <a href="#gallery" class="text-gray-600 hover:text-indigo-600 transition duration-300">Gallery</a>
+                <a href="#location" class="text-gray-600 hover:text-indigo-600 transition duration-300">Location</a>
+                <a href="#contact_us" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact us</a>
+                <a href="#book" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 shadow hover:shadow-lg transform hover:-translate-y-0.5">
+                    Book Now
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="relative h-[70vh] md:h-[85vh] bg-cover bg-center text-white flex items-center justify-center" style="background-image: url('galery/Main.png')">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            <div class="relative z-10 text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 hero-text-animation" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">My tiny Smart Home</h1>
+                <p class="text-lg md:text-2xl mb-8 hero-text-animation" style="animation-delay: 0.3s; opacity: 0; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">2 Guest | Hot Tub | Stunning Outdoor Space</p>
+                <a href="#book" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hero-button-animation">
+                    Check Availability
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Experience Tranquility</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 leading-relaxed">
+                    Escape the everyday and immerse yourself in the peace and beauty of our Tiny House. Perfect couples, or friends seeking adventure or relaxation. Enjoy modern comforts surrounded by  quiet neighborhood. Wake up and decide whether to spend a relaxing day in the hot tub or enjoy everything South Florida has to offer.
+                </p>
+            </div>
+        </section>
+
+        <section id="amenities" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">What We Offer</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12">
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-white p-6 rounded-full shadow-lg w-24 h-24 mx-auto flex items-center justify-center mb-4 border-2 border-indigo-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="fill:#4e46e4;" viewBox="0 0 512 512"><path d="M272 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 5.2c0 34 14.4 66.4 39.7 89.2l16.4 14.8c15.2 13.7 23.8 33.1 23.8 53.5l0 13.2c0 13.3 10.7 24 24 24s24-10.7 24-24l0-13.2c0-34-14.4-66.4-39.7-89.2L295.8 82.8C280.7 69.1 272 49.7 272 29.2l0-5.2zM0 320l0 16L0 448c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-128c0-35.3-28.7-64-64-64l-170.7 0c-13.8 0-27.3-4.5-38.4-12.8l-85.3-64C137 166.7 116.8 160 96 160c-53 0-96 43-96 96l0 64zm128 16l0 96c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm80-16c8.8 0 16 7.2 16 16l0 96c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-96c0-8.8 7.2-16 16-16zm112 16l0 96c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-96c0-8.8 7.2-16 16-16s16 7.2 16 16zm80-16c8.8 0 16 7.2 16 16l0 96c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-96c0-8.8 7.2-16 16-16zM360 0c-13.3 0-24 10.7-24 24l0 5.2c0 34 14.4 66.4 39.7 89.2l16.4 14.8c15.2 13.7 23.8 33.1 23.8 53.5l0 13.2c0 13.3 10.7 24 24 24s24-10.7 24-24l0-13.2c0-34-14.4-66.4-39.7-89.2L407.8 82.8C392.7 69.1 384 49.7 384 29.2l0-5.2c0-13.3-10.7-24-24-24zM64 128A64 64 0 1 0 64 0a64 64 0 1 0 0 128z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-700">Hot Tub</h3>
+                        <p class="text-sm text-gray-500">Relax under the stars</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-white p-6 rounded-full shadow-lg w-24 h-24 mx-auto flex items-center justify-center mb-4 border-2 border-indigo-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="fill:#4e46e4;" viewBox="0 0 640 512"><path d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.2-.9s11.8-33-.9-45.2C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.2 .9zM320 256c56.8 0 108.6 21.1 148.2 56c13.3 11.7 33.5 10.4 45.2-2.8s10.4-33.5-2.8-45.2C459.8 219.2 393 192 320 192s-139.8 27.2-190.5 72c-13.3 11.7-14.5 31.9-2.8 45.2s31.9 14.5 45.2 2.8c39.5-34.9 91.3-56 148.2-56zm64 160a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-700">High-Speed WiFi</h3>
+                        <p class="text-sm text-gray-500">Stay connected</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-white p-6 rounded-full shadow-lg w-24 h-24 mx-auto flex items-center justify-center mb-4 border-2 border-indigo-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="fill:#4e46e4;" viewBox="0 0 512 512"><path d="M135.2 117.4L109.1 192l293.8 0-26.1-74.6C372.3 104.6 360.2 96 346.6 96L165.4 96c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32l181.2 0c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2l0 144 0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48L96 400l0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48L0 256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
+                               </div>
+                        <h3 class="text-lg font-semibold text-gray-700">Tesla car included</h3>
+                        <p class="text-sm text-gray-500">Get everywhere in a luxury car</p>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                        <div class="bg-white p-6 rounded-full shadow-lg w-24 h-24 mx-auto flex items-center justify-center mb-4 border-2 border-indigo-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="fill:#4e46e4;" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-700">Prime Location</h3>
+                        <p class="text-sm text-gray-500">Close to absolutely everything</p>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">Explore the Property</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" data-aos="zoom-in">
+                        <img src="galery/tesla.png" alt="Entry" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300 gallery-item">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="50">
+                        <img src="galery/backyard.png" alt="backyard" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300 gallery-item">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="galery/patio.avif" alt="breakfast zone" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300 gallery-item">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="150">
+                        <img src="galery/room.png" alt="Room" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300 gallery-item">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="galery/room_tv.avif" alt="room tv" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300 gallery-item">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="galery/kitchen.png" alt="Outdoor Seating" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300 gallery-item">
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="250">
+                        <img src="galery/bathroom.png" alt="bathroom" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300 gallery-item">
+                    </div>
+                    
+                     <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="350">
+                        <img src="galery/landry.png" alt="Entryway" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300 gallery-item">
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="location" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Discover the Charm of Miami and Beyond.</h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Enjoy the serenity of a quiet residential area while being incredibly well-connected to the excitement and attractions that South Florida has to offer.
+                        Your Local Escape
+                        Step outside and discover the peaceful atmosphere of our neighborhood.
+                        Take a stroll in nearby parks, savor authentic flavors at local restaurants, and experience the genuine warmth of the community.</p>
+
+                        Our location boasts excellent transportation links, making it a breeze to explore the wider region. Major highways are easily accessible, putting you within comfortable reach of:
+                         
+                        <ul class="list-disc">
+                            <li>The vibrant nightlife and cultural scene of Downtown Miami.</li>
+                            <li>The stunning beaches and waterways of Fort Lauderdale.</li>
+                            <li>World-class shopping at Aventura Mall and Sawgrass Mills. </li>
+                            <li>Thrilling events and concerts at Hard Rock Stadium.  </li>
+                        </ul>
+                        
+                    
+                </div>
+                <div class="md:w-1/2 w-full h-64 md:h-96 rounded-lg shadow-lg overflow-hidden" data-aos="fade-left">
+                    <div class="bg-gray-300 w-full h-full flex items-center justify-center text-gray-500">
+                        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7175.5509307062675!2d-80.26868192358671!3d25.942596377238797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9af84b1aa8225%3A0x6e3a660149b7bd94!2s3920%20NW%20186th%20St%2C%20Miami%20Gardens%2C%20FL%2033055!5e0!3m2!1sen!2sus!4v1746123009605!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact_us" class="py-16 md:py-24 bg-white">
+            <div class="container px-6 py-12 mx-auto">
+                <div>
+
+                    <h1 class="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">Contact us</h1>
+        
+                    <p class="mt-3 text-gray-500 dark:text-gray-400">Our friendly team is always here to chat.</p>
+                </div>
+        
+                <div class="grid grid-cols-1 gap-12 mt-10 md:grid-cols-2 lg:grid-cols-3">
+                    <div>
+                        <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                            </svg>
+                        </span>
+        
+                        <h2 class="mt-4 text-lg font-medium text-gray-800 dark:text-white">Email</h2>
+                        <p class="mt-2 text-gray-500 dark:text-gray-400">Our friendly team is here to help.</p>
+                        <p class="mt-2 text-blue-500 dark:text-blue-400">booking@mytinyhousemiami.com</p>
+                    </div>
+        
+                    <div>
+                        <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                            </svg>
+                        </span>
+        
+                        <h2 class="mt-4 text-lg font-medium text-gray-800 dark:text-white">Phone</h2>
+                        <p class="mt-2 text-gray-500 dark:text-gray-400">Mon-Fri from 8am to 7pm.</p>
+                        <p class="mt-2 text-blue-500 dark:text-blue-400">+1 (813) 2787581</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="book" class="py-20 md:py-32 bg-indigo-700 text-white text-center">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready for Your Escape?</h2>
+                <p class="text-lg md:text-xl mb-8 text-indigo-100 max-w-2xl mx-auto">
+                    Check our availability and secure your dates today.
+                </p>
+                <a href="http://airbnb.com/h/mytinyhousemiami" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-gray-100 text-indigo-700 font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block">
+                    Book on Airbnb
+                </a>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; 2025 My Tiny Home. All rights reserved.</p>
+            </div>
+    </footer>
+
+    <div id="galleryModal" class="modal fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-[100] opacity-0 pointer-events-none">
+        <div class="modal-content bg-white p-2 rounded-lg max-w-3xl max-h-[80vh] w-full relative transform scale-95">
+            <button id="closeModal" class="absolute -top-4 -right-4 bg-white text-gray-800 rounded-full p-2 shadow-lg hover:bg-gray-200 transition z-10">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <img id="modalImage" src="" alt="Gallery Image" class="w-full h-auto max-h-[calc(80vh-1rem)] object-contain rounded">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // Animation duration
+            once: true, // Whether animation should happen only once - while scrolling down
+            offset: 50, // Offset (in px) from the original trigger point
+        });
+
+        // Simple Gallery Modal Logic
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const modal = document.getElementById('galleryModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModalBtn = document.getElementById('closeModal');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.getAttribute('src');
+                // Use a higher-res version if available, otherwise use the thumbnail src
+                const highResSrc = item.dataset.highRes || imgSrc; // Example: add data-high-res="path/to/high-res.jpg" to img tag
+                modalImage.setAttribute('src', highResSrc);
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modal.querySelector('.modal-content').classList.remove('scale-95');
+            });
+        });
+
+        const closeModal = () => {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.querySelector('.modal-content').classList.add('scale-95');
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Close modal if clicking outside the image content
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
+                closeModal();
+            }
+        });
+
+    </script>
+</body>
+</html>
